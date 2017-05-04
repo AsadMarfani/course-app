@@ -1,0 +1,7 @@
+nav {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+}
+a.active {
+  text-decoration-style: none; 
+}
