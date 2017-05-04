@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import Header from '../../common/Header';
 import './App.css';
 
@@ -11,6 +11,10 @@ class App extends Component {
       </div>
     );
   }
+}
+
+App.propTypes = {
+  children: PropTypes.object.isRequired
 }
 
 export default App;

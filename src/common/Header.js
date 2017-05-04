@@ -7,6 +7,8 @@ const Header = () => {
                 <IndexLink to = "/" activeClassName = "active" activeStyle = {{fontWeight: 'bold'}}>HOME</IndexLink> 
                 {" | "}
                 <Link to = "/about" activeClassName = "active" activeStyle = {{fontWeight: 'bold'}}>ABOUT</Link>
+                 {" | "}
+                <Link to = "/courses" activeClassName = "active" activeStyle = {{fontWeight: 'bold'}}>COURSES</Link>
             </nav>
     )
 }
