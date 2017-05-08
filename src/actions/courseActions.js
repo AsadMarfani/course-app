@@ -1,5 +1,6 @@
 import * as types from './actionTypes';
 import courseApi from '../api/mockCourseApi';
+
 export var createCourse = (course) => {
     return {
         type: types.CREATE_COURSE,
@@ -22,4 +23,27 @@ export var loadCourses = () => {
             throw (error);
         })
     };
+}
+
+export var updateCourseSuccess = (course) => {
+    return {
+        type: types.UPDATE_COURSE_SUCCESS,
+        course
+    };
+}
+export var createCourseSuccess = (course) => {
+    return {
+        type: types.UPDATE_COURSE_SUCCESS,
+        course
+    };
+}
+
+export var saveCourse = (course) => {
+    return (dispatch) => {
+        return courseApi.saveCourse(course).then(course => {
+            course.id ? dispatch(updateCourseSuccess(course)) : dispatch(createCourseSuccess(course));
+        }).catch(error => {
+            throw (error);
+        })
+    }
 }
